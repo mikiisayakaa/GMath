@@ -149,11 +149,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="simdtypes.h" />
+    <ClInclude Include="simdmacros.h" />
+    <ClInclude Include="simdVecFuncs.h" />
     <ClInclude Include="TimeTest.h" />
     <ClInclude Include="Vector.h" />
-    <ClInclude Include="Vector2.h" />
-    <ClInclude Include="Vector3.h" />
+    <ClInclude Include="VectorDefs.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />

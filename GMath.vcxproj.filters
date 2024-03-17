@@ -18,16 +18,16 @@
     <ClInclude Include="Vector.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Vector2.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Vector3.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="simdtypes.h">
+    <ClInclude Include="simdVecFuncs.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="TimeTest.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="simdmacros.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="VectorDefs.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

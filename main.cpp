@@ -1,6 +1,5 @@
 ﻿#include "Vector.h"
-#include "Vector2.h"
-#include "Vector3.h"
+#include "VectorDefs.h"
 
 #include <string>
 #include <iostream>
@@ -17,19 +16,21 @@ int main() {
 	int num = 10000000;
 
 
-	std::vector<Eigen::Vector4d> arre1(num, Eigen::Vector4d(1, 2, 3, 4));
-	std::vector<Eigen::Vector4d> arre2(num, Eigen::Vector4d(1, 2, 3, 4));
-	std::vector<Eigen::Vector4d> arre3(num);
+	std::vector<Eigen::Vector4f> arre1(num, Eigen::Vector4f(1, 2, 3, 4));
+	std::vector<Eigen::Vector4f> arre2(num, Eigen::Vector4f(1, 2, 3, 4));
+	std::vector<Eigen::Vector4f> arre3(num);
 
 
 
-	std::vector<glm::dvec4> arrg1(num, glm::dvec4(1, 2, 3, 4));
-	std::vector<glm::dvec4> arrg2(num, glm::dvec4(1, 2, 3, 4));
-	std::vector<glm::dvec4> arrg3(num);
+	std::vector<glm::fvec4> arrg1(num, glm::fvec4(1, 2, 3, 4));
+	std::vector<glm::fvec4> arrg2(num, glm::fvec4(1, 2, 3, 4));
+	std::vector<glm::fvec4> arrg3(num);
 
-	std::vector<Vector<double, 4>> arr1(num, Vector<double, 4>(1, 2, 3, 4));
-	std::vector<Vector<double, 4>> arr2(num, Vector<double, 4>(1, 2, 3, 4));
-	std::vector<Vector<double, 4>> arrRst(num);
+	std::vector<Vector4f> arr1(num, Vector4f(1, 2, 3, 4));
+	std::vector<Vector4f> arr2(num, Vector4f(1, 2, 3, 4));
+	std::vector<Vector4f> arrRst(num);
+
+	std::cout << Vector3f(1, 2, 3) * Vector3f(4, 5, 6);
 
 
 	TIME_START("Eigen")

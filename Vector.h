@@ -4,14 +4,14 @@
 #include <array>
 #include <iostream>
 #include <cmath>
-#include "simdtypes.h"
+#include "simdVecFuncs.h"
 
 #include <immintrin.h>
 
 
 namespace GMath {
 
-	template <typename T, int dim, typename = std::enable_if_t<std::is_floating_point<T>::value>>
+	template <typename T, int dim>
 	class Vector : public std::array<T, dim>{
 	public:
 
@@ -22,6 +22,11 @@ namespace GMath {
 
 		Vector(const Vector<T, dim>& other) {
 			simd_Copy(*this, other);
+		}
+
+		Vector<T, dim>& operator=(const Vector<T, dim>& other) {
+			simd_Copy(*this, other);
+			return (*this);
 		}
 
 		int dimension() const { return dim; }
@@ -78,6 +83,9 @@ namespace GMath {
 			os << ")";
 			return os;
 		}
+
+	protected:
+
 	};
 
 }
